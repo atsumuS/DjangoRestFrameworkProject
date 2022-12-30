@@ -8,8 +8,7 @@ from women.models import Women
     
 class WomenSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
-    class Meta: # класс отвечает за показ информации на сайте, 
-        # кроме этого делает нормальным поля заполнения в DRF
+    class Meta: 
         model = Women # указываем модель 
         fields = ('__all__')  #  поля для заполнения 
         

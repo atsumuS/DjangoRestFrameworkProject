@@ -18,14 +18,13 @@ from rest_framework.authentication import TokenAuthentication
 
 
 
-class WomenApiList(generics.ListCreateAPIView): # базовый класс показания данных
+class WomenApiList(generics.ListCreateAPIView): 
         queryset = Women.objects.all()
         serializer_class = WomenSerializer
         permission_classes = [IsAuthenticatedOrReadOnly]
         
 
-class WomenApiUpdate(generics.RetrieveUpdateDestroyAPIView): # позволяет совершать PUT запросы - то есть
-        # то есть обновлять данные в бд
+class WomenApiUpdate(generics.RetrieveUpdateDestroyAPIView):
         queryset = Women.objects.all()
         serializer_class = WomenSerializer
         permission_classes = [ListAloowEditAuth]

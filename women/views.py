@@ -4,7 +4,6 @@ from rest_framework import generics
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
 from django.shortcuts import render
 from .models import Category, Women
-# from .serializers import WomenSerializer
 from rest_framework.views import APIView
 from rest_framework.decorators import action
 from rest_framework.response import Response
